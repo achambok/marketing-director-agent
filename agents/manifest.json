@@ -1,0 +1,22 @@
+{
+  "director": {
+    "file": "agents/director.md",
+    "owns": ["strategy", "governance", "budget", "reporting"],
+    "approves": "all"
+  },
+  "routing": [
+    { "agent": "strategy", "file": "agents/agent-strategy.md", "keywords": ["TAM", "ICP", "positioning", "competitive", "pricing", "research"] },
+    { "agent": "seo", "file": "agents/agent-seo.md", "keywords": ["SEO", "keywords", "technical SEO", "topic cluster", "backlinks"] },
+    { "agent": "content", "file": "agents/agent-content.md", "keywords": ["content", "blog", "pillar", "case study", "ebook", "video"] },
+    { "agent": "paid-media", "file": "agents/agent-paid-media.md", "keywords": ["paid", "google ads", "linkedin ads", "cpc", "roas"] },
+    { "agent": "social", "file": "agents/agent-social.md", "keywords": ["social", "community", "ugc", "influencer", "advocacy"] },
+    { "agent": "email-crm", "file": "agents/agent-email-crm.md", "keywords": ["email", "nurture", "lifecycle", "crm", "scoring"] },
+    { "agent": "pr-comms", "file": "agents/agent-pr-comms.md", "keywords": ["PR", "press", "narrative", "boilerplate", "announcement"] },
+    { "agent": "events-field", "file": "agents/agent-events-field.md", "keywords": ["event", "webinar", "booth", "field", "tradeshow"] },
+    { "agent": "partnerships", "file": "agents/agent-partnerships.md", "keywords": ["partner", "alliance", "co-marketing", "MDF"] },
+    { "agent": "web-cro", "file": "agents/agent-web-cro.md", "keywords": ["web", "landing", "CRO", "A/B", "personalization"] },
+    { "agent": "analytics-bi", "file": "agents/agent-analytics-bi.md", "keywords": ["dashboard", "KPI", "attribution", "forecast", "insight"] },
+    { "agent": "marketing-ops", "file": "agents/agent-marketing-ops.md", "keywords": ["UTM", "tracking", "MAP", "CRM", "automation"] },
+    { "agent": "budget-planning", "file": "agents/agent-budget-planning.md", "keywords": ["budget", "forecast", "payback", "MER", "LTV", "CAC"] }
+  ]
+}
