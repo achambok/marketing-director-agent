@@ -7,20 +7,32 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  lint-markdown:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Super-Linter (Markdown/YAML/JSON)
-        uses: super-linter/super-linter/slim@v7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEFAULT_BRANCH: main
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_MARKDOWN: true
-          VALIDATE_YAML: true
-          VALIDATE_JSON: true
+      - name: Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: |
+            **/*.md
+          config: .markdownlint.yml
+
+  validate-json-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate JSON and YAML
+        uses: GrantBirki/json-yaml-validate@v3
+        with:
+          json_files: |
+            **/*.json
+          yaml_files: |
+            **/*.yml
+            **/*.yaml
+
   docs-links:
     runs-on: ubuntu-latest
     steps:
